@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "lint": "eslint src --ext .js,.jsx,.mjs,.cjs",
+    "check": "npm run lint"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -14,6 +16,9 @@
     "sequelize": "^6.37.7"
   },
   "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-sonarjs": "^0.21.0",
+    "globals": "^16.1.0",
     "nodemon": "^3.1.10"
   }
 }

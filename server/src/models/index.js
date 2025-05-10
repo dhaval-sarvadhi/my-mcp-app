@@ -15,9 +15,10 @@ const sequelize = new Sequelize(
   }
 );
 
-const db = {};
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
+const db = {
+  sequelize,
+  Sequelize,
+};
 
 // Dynamically import all models in this directory (except index.js)
 fs.readdirSync(__dirname)

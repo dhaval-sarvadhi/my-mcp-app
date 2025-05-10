@@ -1,8 +1,9 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("./index");
-
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define(
+  // User.associate = (models) => {
+  //   // Define associations here
+  // };
+
+  return sequelize.define(
     "User",
     {
       id: {
@@ -32,10 +33,4 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: true,
     }
   );
-
-  // User.associate = (models) => {
-  //   // Define associations here
-  // };
-
-  return User;
 };
