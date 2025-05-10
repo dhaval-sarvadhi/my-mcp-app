@@ -40,3 +40,58 @@
 .read-the-docs {
   color: #888;
 }
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #18181b;
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #f1f3f4;
+  --color-gray-200: #e0e0e0;
+  --color-gray-300: #cfd8dc;
+  --color-gray-400: #b0b0b0;
+  --color-gray-500: #888888;
+  --color-gray-600: #555555;
+  --color-gray-700: #333333;
+  --color-gray-800: #232323;
+  --color-gray-900: #18181b;
+  --color-theme-bg: var(--color-black);
+  --color-theme-text: var(--color-white);
+  --color-theme-primary: var(--color-gray-400);
+  --color-theme-primary-dark: var(--color-gray-700);
+  --color-theme-primary-light: var(--color-gray-200);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-theme-bg: var(--color-white);
+    --color-theme-text: var(--color-black);
+    --color-theme-primary: var(--color-gray-700);
+    --color-theme-primary-dark: var(--color-gray-900);
+    --color-theme-primary-light: var(--color-gray-400);
+  }
+}
+
+body {
+  background: var(--color-theme-bg);
+  color: var(--color-theme-text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Example utility classes */
+.bg-primary {
+  background: var(--color-theme-primary);
+  color: var(--color-white);
+}
+.text-primary {
+  color: var(--color-theme-primary);
+}
+.text-primary-dark {
+  color: var(--color-theme-primary-dark);
+}
+.text-primary-light {
+  color: var(--color-theme-primary-light);
+}
